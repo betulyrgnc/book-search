@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if results %}
+{% for result in results %}
+<div class="row">
+    <div class="col">
+        <img src="{{ result.image }}" width="300" height="300">
+        <a href>{{result.title}}</a>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% endblock content %}
