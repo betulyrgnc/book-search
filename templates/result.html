@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="row">
+    <div class="col-sm-12">
+        <p>Your search for "{{query}}" produced:</p>
+    </div>
+</div>
 {% if results %}
 {% for result in results %}
 <div class="row">
     <div class="col">
         <img src="{{ result.image }}" width="300" height="300">
-        <a href>{{result.title}}</a>
+        <a href>{{result.title}}</a> <span> / Ücret: {{result.price}}</span>     
     </div>
 </div>
 {% endfor %}

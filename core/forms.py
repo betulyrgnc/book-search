@@ -2,10 +2,10 @@ from django import forms
 
 
 PARAMETER_CHOICES = (
-    ('name', 'Name'),
-    ('category', 'Category')
+    ('all', 'All'),
+    ('name', 'Name')
+    
 )
-
 
 class SearchForm(forms.Form):
     query = forms.CharField(label='Search query', max_length=255)
