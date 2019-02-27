@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="row-md-6">
+        <p> Kayıtlı Bookmarklarım: </p>
+    </div>
+    <ul class="img-area">
+        {% if results %}
+        {% for result in results %}
+        <li>
+            <div class="row-md-6">
+                <p>{{ result.title }}</p>
+            </div>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+</div>
+{% endblock content %}

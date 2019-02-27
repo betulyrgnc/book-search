@@ -1,3 +1,16 @@
 from django.contrib import admin
 
-# Register your models here.
+from core.models import Bookmark
+
+class BookmarkAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('HashTag General Informations', {
+            'fields' : ('title',)
+        }),
+    )
+
+    list_display = ('title',)
+    search_fields = ('title',)
+    ordering = ('title',)
+
+admin.site.register(Bookmark, BookmarkAdmin)
